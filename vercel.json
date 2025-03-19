@@ -1,0 +1,20 @@
+{
+    "version": 2,
+    "builds": [
+        {
+            "src": "app.py",
+            "use": "@vercel/python"
+        }
+    ],
+    "routes": [
+        {
+            "src": "/(.*)",
+            "dest": "app.py"
+        }
+    ],
+    "env": {
+        "FLASK_ENV": "production",
+        "DATABASE_URL": "postgresql://neondb_owner:npg_SKJP7uqa6tlb@ep-shiny-fire-a997p03r-pooler.gwc.azure.neon.tech/neondb?sslmode=require",
+        "SQLALCHEMY_DATABASE_URI": "postgresql://neondb_owner:npg_SKJP7uqa6tlb@ep-shiny-fire-a997p03r-pooler.gwc.azure.neon.tech/neondb?sslmode=require"
+    }
+} 
